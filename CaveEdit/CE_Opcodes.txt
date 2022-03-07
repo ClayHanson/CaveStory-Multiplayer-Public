@@ -1,0 +1,344 @@
+Decimal	Code	Name	ModR/M	RegCode	Reg	RegSize	RM	RMSize	Imm	Rel	Order (RM Dest)	FLAGS:A|C|O|S|P|Z|T|I|D|	Description	Operation
+55	37	AAA	0	100	101	0	101	0	0	1	0	AC.......	Ascii Adjust for Addition	
+213	D5	AAD	0	100	103	1	101	0	1	1	0	...SPZ...	Ascii Adjust for Division	AL = AL + (AH*I); AH = 0;
+212	D4	AAM	0	100	103	1	101	0	1	1	0	...SPZ...	Ascii Adjust for Multiplication	AH = AL / I; AL = AL % I;
+63	3F	AAS	0	100	101	0	101	0	0	1	0	AC.......	Ascii Adjust for Suntraction	
+16	10	ADC	1	100	100	1	100	1	0	1	1	ACOSPZ...	Add with carry	RM8 = RM8 + R8 + CF;
+17	11	ADC	1	100	100	4	100	4	0	1	1	ACOSPZ...	Add with carry	RM32 = RM32 + R32 + CF;
+18	12	ADC	1	100	100	1	100	1	0	1	0	ACOSPZ...	Add with carry	R8 = R8 + RM8 + CF;
+19	13	ADC	1	100	100	4	100	4	0	1	0	ACOSPZ...	Add with carry	R32 = R32 + RM32 + CF;
+20	14	ADC	0	100	0	1	103	1	1	1	0	ACOSPZ...	Add with carry	AL = AL + I + CF;
+21	15	ADC	0	100	0	4	103	4	4	1	0	ACOSPZ...	Add with carry	EAX = EAX + I + CF;
+128	80	ADC	1	2	103	1	100	1	1	1	1	ACOSPZ...	Add with carry	RM8 = RM8 + I + CF;
+129	81	ADC	1	2	103	4	100	4	4	1	1	ACOSPZ...	Add with carry	RM32 = RM32 + I + CF;
+131	83	ADC	1	2	103	1	100	4	1	1	1	ACOSPZ...	Add with carry	RM32 = RM32 + I + CF;
+0	0	ADD	1	100	100	1	100	1	0	1	1	ACOSPZ...	Add	RM8 = RM8 + R8;
+1	1	ADD	1	100	100	4	100	4	0	1	1	ACOSPZ...	Add	RM32 = RM32 + R32;
+2	2	ADD	1	100	100	1	100	1	0	1	0	ACOSPZ...	Add	R8 = R8 + RM8;
+3	3	ADD	1	100	100	4	100	4	0	1	0	ACOSPZ...	Add	R32 = R32 + RM32;
+4	4	ADD	0	100	0	1	103	1	1	1	0	ACOSPZ...	Add	AL = AL + I;
+5	5	ADD	0	100	0	4	103	4	4	1	0	ACOSPZ...	Add	EAX = EAX + I;
+128	80	ADD	1	0	103	1	100	1	1	1	1	ACOSPZ...	Add	RM8 = RM8 + I;
+129	81	ADD	1	0	103	4	100	4	4	1	1	ACOSPZ...	Add	RM32 = RM32 + I;
+131	83	ADD	1	0	103	1	100	4	1	1	1	ACOSPZ...	Add	RM32 = RM32 + I;
+32	20	AND	1	100	100	1	100	1	0	1	1	.COSPZ...	And	RM8 = RM8 & R8;
+33	21	AND	1	100	100	4	100	4	0	1	1	.COSPZ...	And	RM32 = RM32 & R32;
+34	22	AND	1	100	100	1	100	1	0	1	0	.COSPZ...	And	R8 = R8 & RM8;
+35	23	AND	1	100	100	4	100	4	0	1	0	.COSPZ...	And	R32 = R32 & RM32;
+36	24	AND	0	100	0	1	103	1	1	1	0	.COSPZ...	And	AL = AL & I;
+37	25	AND	0	100	0	4	103	4	4	1	0	.COSPZ...	And	EAX = EAX & I;
+128	80	AND	1	4	103	1	100	1	1	1	1	.COSPZ...	And	RM8 = RM8 & I;
+129	81	AND	1	4	103	4	100	4	4	1	1	.COSPZ...	And	RM32 = RM32 & I;
+131	83	AND	1	4	103	4	100	4	1	1	1	.COSPZ...	And	RM32 = RM32 & I;
+98	62	BOUND	1	100	100	4	100	4	0	1	0	.........	Array Index Bound Check	
+4028	0FBC	BSF	1	100	100	4	100	4	0	1	0	.....Z...	Bit Scan Forward	"if (RM32 != 0) {ZF = 0; R32 = 0; while (Bit(RM32, R32) == 0) R32++;} else ZF = 1;"
+4029	0FBD	BSR	1	100	100	4	100	4	0	1	0	.....Z...	Bit Scan Reverse	"if (RM32 != 0) {ZF = 0; R32 = 31; while (Bite(RM32, R32) == 0) R32--;} else ZF = 1;"
+4040	0FC8	BSWAP	0	100	0	4	101	0	0	1	0	.........	Byte swap	temp = AL; AL = AXH; AXH = temp; temp = AH; AH = AXL; AXL = temp;
+4041	0FC9	BSWAP	0	100	1	4	101	0	0	1	0	.........	Byte swap	temp = CL; CL = CXH; CXH = temp; temp = CH; CH = CXL; CXL = temp;
+4042	0FCA	BSWAP	0	100	2	4	101	0	0	1	0	.........	Byte swap	temp = DL; DL = DXH; DXH = temp; temp = DH; DH = DXL; DXL = temp;
+4043	0FCB	BSWAP	0	100	3	4	101	0	0	1	0	.........	Byte swap	temp = BL; BL = BXH; BXH = temp; temp = BH; BH = BXL; BXL = temp;
+4044	0FCC	BSWAP	0	100	4	4	101	0	0	1	0	.........	Byte swap	temp = SPL; SPL = SPXH; SPXH = temp; temp = SPH; SPH = SPXL; SPXL = temp;
+4045	0FCD	BSWAP	0	100	5	4	101	0	0	1	0	.........	Byte swap	temp = BPL; BPL = BPXH; BPXH = temp; temp = BPH; BPH = BPXL; BPXL = temp;
+4046	0FCE	BSWAP	0	100	6	4	101	0	0	1	0	.........	Byte swap	temp = SIL; SIL = SIXH; SIXH = temp; temp = SIH; SIH = SIXL; SIXL = temp;
+4047	0FCF	BSWAP	0	100	7	4	101	0	0	1	0	.........	Byte swap	temp = DIL; DIL = DIXH; DIXH = temp; temp = DIH; DIH = DIXL; DIXL = temp;
+4003	0FA3	BT	1	100	100	4	100	4	0	1	1	.C.......	Bit Test	"CF = Bit(RM32, R32);"
+4026	0FBA	BT	1	4	103	1	100	4	1	1	1	.C.......	Bit Test	"CF = Bit(RM32, I);"
+4026	0FBA	BTC	1	7	103	1	100	4	1	1	1	.C.......	Bit Test with Compliment	"CF = !Bit(RM32, I);"
+4027	0FBB	BTC	1	100	100	4	100	4	0	1	1	.C.......	Bit Test with Compliment	"CF = !Bit(RM32, R32);"
+4019	0FB3	BTR	1	100	100	4	100	4	0	1	1	.........	Bit Test with Reset	"CF = Bit(RM32, R32); Bit(RM32, R32) = 0;"
+4026	0FBA	BTR	1	6	103	1	100	4	1	1	1	.........	Bit Test with Reset	"CF = Bit(RM32, I); Bit(RM32, I) = 0;"
+4011	0FAB	BTS	1	100	100	4	100	4	0	1	1	.........	Bit Test and Set	"CF = Bit(RM32, R32); Bit(RM32, R32) = 1;"
+4026	0FBA	BTS	1	5	103	1	100	4	1	1	1	.........	Bit Test and Set	"CF = Bit(RM32, I); Bit(RM32, I) = 1;"
+154	9A	CALL	0	100	101	0	103	4	4	0	1	.........	Procedure Call	PUSH EIP; EIP = I;
+232	E8	CALL	0	100	101	0	103	4	4	1	1	.........	Procedure Call	PUSH EIP; EIP += I;
+255	FF	CALL	1	2	101	0	100	4	0	0	1	.........	Procedure Call	PUSH EIP; EIP = RM32;
+255	FF	CALL	1	3	101	0	102	4	0	0	1	.........	Procedure Call	PUSH EIP; EIP = M32;
+152	98	CBW	0	100	101	0	101	0	0	1	0	.........	Convert Byte to Word	EAX = AX;
+153	99	CDQ	0	100	101	0	101	0	0	1	0	.........	Convert Double to Quad	EDX:EAX = EAX;
+248	F8	CLC	0	100	101	0	101	0	0	1	0	.........	Clear Carry	CF = 0;
+252	FC	CLD	0	100	101	0	101	0	0	1	0	.........	Clear Direction Flag	DF = 0;
+250	FA	CLI	0	100	101	0	101	0	0	1	0	.........	Clear Interrupt Flag	IF = 0;
+3846	0F06	CLTS	0	100	101	0	101	0	0	1	0	.........	Clear Task Switched Flag	TS = 0;
+245	F5	CMC	0	100	101	0	101	0	0	1	0	.........	Complement Carry Flag	CF = !CF;
+3911	0F47	CMOVA	1	100	100	4	100	4	0	1	0	.........	Move if Above	if (CF == 0 && ZF == 0) R32 = RM32;
+3907	0F43	CMOVAE	1	100	100	4	100	4	0	1	0	.........	Move if No Carry	if (CF == 0) R32 = RM32;
+3906	0F42	CMOVB	1	100	100	4	100	4	0	1	0	.........	Move if Carry	if (CF == 1) R32 = RM32;
+3910	0F46	CMOVBE	1	100	100	4	100	4	0	1	0	.........	Move if Below or Equal	if (CF == 1 || ZF == 1) R32 = RM32;
+3908	0F44	CMOVE	1	100	100	4	100	4	0	1	0	.........	Move if Zero	if (ZF == 1) R32 = RM32;
+3919	0F4F	CMOVG	1	100	100	4	100	4	0	1	0	.........	Move if Greater	if (ZF == 0 && SF == OF) R32 = RM32;
+3917	0F4D	CMOVGE	1	100	100	4	100	4	0	1	0	.........	Move if Greater or Equal	if (SF == OF) R32 = RM32;
+3916	0F4C	CMOVL	1	100	100	4	100	4	0	1	0	.........	Move if Less	if (SF != OF) R32 = RM32;
+3918	0F4E	CMOVLE	1	100	100	4	100	4	0	1	0	.........	Move if Less or Equal	if (ZF == 1 || SF != OF) R32 = RM32;
+3909	0F45	CMOVNE	1	100	100	4	100	4	0	1	0	.........	Move if No Zero	if (ZF == 0) R32 = RM32;
+3905	0F41	CMOVNO	1	100	100	4	100	4	0	1	0	.........	Move if No Overflow	if (OF == 0) R32 = RM32;
+3915	0F4B	CMOVNP	1	100	100	4	100	4	0	1	0	.........	Move if Not Parity	if (PF == 0) R32 = RM32;
+3913	0F49	CMOVNS	1	100	100	4	100	4	0	1	0	.........	Move if Not Sign	if (SF == 0) R32 = RM32;
+3904	0F40	CMOVO	1	100	100	4	100	4	0	1	0	.........	Move if Overflow	if (OF == 1) R32 = RM32;
+3914	0F4A	CMOVP	1	100	100	4	100	4	0	1	0	.........	Move if Parity	if (PF == 1) R32 = RM32;
+3912	0F48	CMOVS	1	100	100	4	100	4	0	1	0	.........	Move if Sign	if (SF == 1) R32 = RM32;
+56	38	CMP	1	100	100	1	100	1	0	1	1	ACOSPZ...	Compare	temp = RM8 - R8;
+57	39	CMP	1	100	100	4	100	4	0	1	1	ACOSPZ...	Compare	temp = RM32 - R32;
+58	3A	CMP	1	100	100	1	100	1	0	1	0	ACOSPZ...	Compare	temp = R8 - RM8;
+59	3B	CMP	1	100	100	4	100	4	0	1	0	ACOSPZ...	Compare	temp = R32 - RM32;
+60	3C	CMP	0	100	0	1	103	1	1	1	0	ACOSPZ...	Compare	temp = AL - I;
+61	3D	CMP	0	100	0	4	103	4	4	1	0	ACOSPZ...	Compare	temp = EAX - I;
+128	80	CMP	1	7	103	1	100	1	1	1	1	ACOSPZ...	Compare	temp = RM8 - I;
+129	81	CMP	1	7	103	4	100	4	4	1	1	ACOSPZ...	Compare	temp = RM32 - I;
+131	83	CMP	1	7	103	1	100	4	1	1	1	ACOSPZ...	Compare	temp = RM32 - I;
+166	A6	CMPSB	0	100	101	0	101	0	0	1	0	ACOSPZ...	Compare String	temp = BYTE(DS:ESI) - BYTE(ES:EDI)
+167	A7	CMPSD	0	100	101	0	101	0	0	1	0	ACOSPZ...	Compare String	temp = DWORD(DS:ESI) - DWORD(ES:EDI)
+4016	0FB0	CMPXCHG	1	100	100	1	100	1	0	1	0	.COSPZ...	Compare and Exchange	if (AL == RM8) {ZF = 1; R8 = RM8;} else {ZF = 0; AL = RM8;};
+4017	0FB1	CMPXCHG	1	100	100	4	100	4	0	1	0	.COSPZ...	Compare and Exchange	if (EAX == RM32) {ZF = 1; R32 = RM32;} else {ZF = 0; EAX = RM32;};
+39	27	DAA	0	100	101	0	101	0	0	1	0	AC.SPZ...	Decimal Adjust for Addition	
+47	2F	DAS	0	100	101	0	101	0	0	1	0	AC.SPZ...	Decimal Adjust for Subtraction	
+72	48	DEC	0	100	0	4	101	0	0	1	0	A.OSPZ...	Decrement	EAX--;
+73	49	DEC	0	100	1	4	101	0	0	1	0	A.OSPZ...	Decrement	ECX--;
+74	4A	DEC	0	100	2	4	101	0	0	1	0	A.OSPZ...	Decrement	EDX--;
+75	4B	DEC	0	100	3	4	101	0	0	1	0	A.OSPZ...	Decrement	EBX--;
+76	4C	DEC	0	100	4	4	101	0	0	1	0	A.OSPZ...	Decrement	ESP--;
+77	4D	DEC	0	100	5	4	101	0	0	1	0	A.OSPZ...	Decrement	EBP--;
+78	4E	DEC	0	100	6	4	101	0	0	1	0	A.OSPZ...	Decrement	ESI--;
+79	4F	DEC	0	100	7	4	101	0	0	1	0	A.OSPZ...	Decrement	EDI--;
+254	FE	DEC	1	1	101	0	100	1	0	1	1	A.OSPZ...	Decrement	RM8--;
+255	FF	DEC	1	1	101	0	100	4	0	1	1	A.OSPZ...	Decrement	RM32--;
+246	F6	DIV	1	6	101	0	100	1	0	1	2	ACOSPZ...	Divide	temp = +AX / RM8; AH = +AX % RM8; AL = temp;
+247	F7	DIV	1	6	101	0	100	4	0	1	2	ACOSPZ...	Divide	temp = +EDX:EAX / RM8; EDX = +EDX:EAX % RM8; EAX = temp;
+246	F6	IDIV	1	7	101	0	100	1	0	1	2	.........	Signed Divide	temp = AX / RM8; AH = AX % RM8; AL = temp;
+247	F7	IDIV	1	7	101	0	100	4	0	1	2	.........	Signed Divide	temp = EDX:EAX / RM8; EDX = EDX:EAX % RM8; EAX = temp;
+105	69	IMUL	1	100	100	0	103	4	4	1	0	.CO......	Signed Multiply	R64 = RM32 * I;
+107	6B	IMUL	1	100	100	0	103	1	1	1	0	.CO......	Signed Multiply	R64 = RM32 * I;
+246	F6	IMUL	1	5	0	1	100	1	0	1	0	.CO......	Signed Multiply	AX = AL * RM8;
+247	F7	IMUL	1	5	0	4	100	4	0	1	0	.CO......	Signed Multiply	EDX:EAX = EAX * RM32;
+228	E4	IN	0	100	103	1	101	0	1	1	0	.........	Input Byte From Port	
+229	E5	IN	0	100	103	1	101	0	1	1	0	.........	Input DWord From Port	
+236	EC	IN	0	100	101	0	101	0	0	1	0	.........	Input Byte From Port	
+237	ED	IN	0	100	101	0	101	0	0	1	0	.........	Input DWord From Port	
+64	40	INC	0	100	0	4	101	0	0	1	0	A.OSPZ...	Increment	EAX++;
+65	41	INC	0	100	1	4	101	0	0	1	0	A.OSPZ...	Increment	ECX++;
+66	42	INC	0	100	2	4	101	0	0	1	0	A.OSPZ...	Increment	EDX++;
+67	43	INC	0	100	3	4	101	0	0	1	0	A.OSPZ...	Increment	EBX++;
+68	44	INC	0	100	4	4	101	0	0	1	0	A.OSPZ...	Increment	ESP++;
+69	45	INC	0	100	5	4	101	0	0	1	0	A.OSPZ...	Increment	EBP++;
+70	46	INC	0	100	6	4	101	0	0	1	0	A.OSPZ...	Increment	ESI++;
+71	47	INC	0	100	7	4	101	0	0	1	0	A.OSPZ...	Increment	EDI++;
+254	FE	INC	1	0	101	0	100	1	0	1	1	A.OSPZ...	Increment	RM8++;
+255	FF	INC	1	0	101	0	100	4	0	1	1	A.OSPZ...	Increment	RM32++;
+205	CD	INT	0	100	103	1	101	0	1	1	0	......TI.	Interrupt	
+204	CC	INT3	0	100	101	0	101	0	0	1	0	......TI.	Interrupt	
+206	CE	INTO	0	100	101	0	101	0	0	1	0	......TI.	Interrupt on Overflow	
+207	CF	IRET	0	100	101	0	101	0	0	1	0	AC.SPZTID	Interrupt Return	
+3975	0F87	JA	0	100	103	4	101	0	4	1	0	.........	Jump if Above	if (CF == 0 && ZF == 0) EIP += I;
+119	77	JA 	0	100	103	1	101	0	1	1	0	.........	Jump if Above	if (CF == 0 && ZF == 0) EIP += I;
+3971	0F83	JAE	0	100	103	4	101	0	4	1	0	.........	Jump if Above or Equal	if (CF == 0) EIP += I;
+3974	0F86	JBE	0	100	103	4	101	0	4	1	0	.........	Jump if Below or Equal	if (CF == 1 || ZF == 1) EIP += I;
+118	76	JBE 	0	100	103	1	101	0	1	1	0	.........	Jump if Below or Equal	if (CF == 1 || ZF == 1) EIP += I;
+3970	0F82	JC	0	100	103	4	101	0	4	1	0	.........	Jump if Carry	if (CF ==1) EIP += I;
+114	72	JC 	0	100	103	1	101	0	1	1	0	.........	Jump if Carry	if (CF == 1) EIP += I;
+3972	0F84	JE	0	100	103	4	101	0	4	1	0	.........	Jump if Equal	if (ZF == 1) EIP += I;
+116	74	JE 	0	100	103	1	101	0	1	1	0	.........	Jump if Equal	if (ZF == 1) EIP += I;
+227	E3	JECXZ 	0	100	103	1	101	0	1	1	0	.........	Jump if Register ECX is Zero	if (ECX == 0) EIP += I;
+3983	0F8F	JG	0	100	103	4	101	0	4	1	0	.........	Jump if Greater	if (ZF == 0 && SF == OF) EIP += I;
+127	7F	JG 	0	100	103	1	101	0	1	1	0	.........	Jump if Greater	if (ZF == 0 && SF == OF) EIP += I;
+3981	0F8D	JGE	0	100	103	4	101	0	4	1	0	.........	Jump if Greater or Equal	
+125	7D	JGE 	0	100	103	1	101	0	1	1	0	.........	Jump if Greater or Equal	if (SF == OF) EIP += I;
+124	7C	JL 	0	100	103	1	101	0	1	1	0	.........	Jump if Less	if (SF != OF) EIP += I;
+3982	0F8E	JLE	0	100	103	4	101	0	4	1	0	.........	Jump if Less or Equal	if (ZF == 1 || SF != OF) EIP += I;
+126	7E	JLE 	0	100	103	1	101	0	1	1	0	.........	Jump if Less or Equal	if (ZF == 1 || SF != OF) EIP += I;
+233	E9	JMP	0	100	103	4	101	0	4	1	0	.........	Jump	EIP += I;
+234	EA	JMP	0	100	103	4	101	0	4	0	0	.........	Jump	EIP = I;
+235	EB	JMP	0	100	103	1	101	0	1	1	0	.........	Jump	EIP += I;
+255	FF	JMP	1	4	101	0	103	4	0	0	1	.........	Jump	EIP = RM32;
+255	FF	JMP	1	5	101	0	102	4	0	0	1	.........	Jump	EIP = M32;
+115	73	JNC 	0	100	103	1	101	0	1	1	0	.........	Jump if Not Carry	if (CF == 0) EIP += I;
+3973	0F84	JNE	0	100	103	4	101	0	4	1	0	.........	Jump if Not Equal	
+117	75	JNE 	0	100	103	1	101	0	1	1	0	.........	Jump if Not Equal	if (ZF == 0) EIP += I;
+113	71	JNO 	0	100	103	1	101	0	1	1	0	.........	Jump if Not Overflow	if (OF == 0) EIP += I;
+123	7B	JNP 	0	100	103	1	101	0	1	1	0	.........	Jump if Parity Odd	if (PF == 0) EIP += I;
+121	79	JNS 	0	100	103	1	101	0	1	1	0	.........	Jump if Not Sign	if (SF == 0) EIP += I;
+112	70	JO 	0	100	103	1	101	0	1	1	0	.........	Jump if Overflow	if (OF == 1) EIP += I;
+122	7A	JP 	0	100	103	1	101	0	1	1	0	.........	Jump if Parity Even	if (PF == 1) EIP += I;
+120	78	JS 	0	100	103	1	101	0	1	1	0	.........	Jump if Sign	if (SF == 1) EIP += I;
+159	9F	LAHF	0	100	101	0	101	4	0	1	0	.........	Load Register AH From Flags	AH = EFLAGS;
+197	C5	LDS	1	100	100	4	100	4	0	1	1	.........	Load Pointer Using DS	
+141	8D	LEA	1	100	100	4	102	4	0	1	1	.........	Load Effective Address	
+201	C9	LEAVE	0	100	101	0	101	0	0	1	0	.........	Leave	
+240	F0	LOCK	0	100	101	0	101	0	0	1	0	.........	Lock Bus	
+172	AC	LODS	0	100	101	0	102	1	0	1	1	.........	Load String	
+173	AD	LODS	0	100	101	0	102	4	0	1	1	.........	Load String	
+226	E2	LOOP	0	100	103	1	101	0	1	1	0	.........	Decrement CX and Loop if CX Not Zero	if (ECX != 0) {EIP += I; ECX--;};
+224	E0	LOOPNZ	0	100	103	1	101	0	1	1	0	.........	Loop While Zero	if (ECX != 0 && ZF == 0) {EIP += I; ECX--;};
+225	E1	LOOPZ	0	100	103	1	101	0	1	1	0	.........	Loop While Not Zero	if (ECX != 0 && ZF == 1) {EIP += I; ECX--;};
+3895	0F37	LSL	1	100	100	4	100	4	0	1	1	.....Z...	Load Segment Limit	
+136	88	MOV	1	100	100	1	100	1	0	1	1	.........	Move	RM8 = R8;
+137	89	MOV	1	100	100	4	100	4	0	1	1	.........	Move	RM32 = R32;
+138	8A	MOV	1	100	100	1	100	1	0	1	0	.........	Move	R8 = RM8;
+139	8B	MOV	1	100	100	4	100	4	0	1	0	.........	Move	R32 = RM32;
+140	8C	MOV	1	100	100	2	100	2	0	1	1	.........	Move	RM16 = SREG;
+142	8E	MOV	1	100	100	2	100	2	0	1	0	.........	Move	SREG = RM16;
+176	B0	MOV	0	100	0	1	103	1	1	1	0	.........	Move	AL = I;
+177	B1	MOV	0	100	1	1	103	1	1	1	0	.........	Move	CL = I;
+178	B2	MOV	0	100	2	1	103	1	1	1	0	.........	Move	DL = I;
+179	B3	MOV	0	100	3	1	103	1	1	1	0	.........	Move	BL = I;
+180	B4	MOV	0	100	4	1	103	1	1	1	0	.........	Move	AH = I;
+181	B5	MOV	0	100	5	1	103	1	1	1	0	.........	Move	CH = I;
+182	B6	MOV	0	100	6	1	103	1	1	1	0	.........	Move	DH = I;
+183	B7	MOV	0	100	7	1	103	1	1	1	0	.........	Move	BH = I;
+184	B8	MOV	0	100	0	4	103	4	4	1	0	.........	Move	EAX = I;
+185	B9	MOV	0	100	1	4	103	4	4	1	0	.........	Move	ECX = I;
+186	BA	MOV	0	100	2	4	103	4	4	1	0	.........	Move	EDX = I;
+187	BB	MOV	0	100	3	4	103	4	4	1	0	.........	Move	EBX = I;
+188	BC	MOV	0	100	4	4	103	4	4	1	0	.........	Move	ESP = I;
+189	BD	MOV	0	100	5	4	103	4	4	1	0	.........	Move	EBP = I;
+190	BE	MOV	0	100	6	4	103	4	4	1	0	.........	Move	ESI = I;
+191	BF	MOV	0	100	7	4	103	4	4	1	0	.........	Move	EDI = I;
+198	C6	MOV	1	0	103	1	100	1	1	1	1	.........	Move	RM8 = I;
+199	C7	MOV	1	0	103	4	100	4	4	1	1	.........	Move	RM32 = I;
+4030	0FBE	MOVSX	1	100	100	1	100	1	0	1	0	.........	Move with Sign Extend	R32 = RM8;
+4031	0FBF	MOVSX	1	100	100	4	100	2	0	1	0	.........	Move with Sign Extend	R32 = RM16;
+4022	0FB6	MOVZX	1	100	100	1	100	1	0	1	0	.........	Move with Zero Extend	R32 = +RM8;
+4023	0FB7	MOVZX	1	100	100	4	100	2	0	1	0	.........	Move with Zero Extend	R32 = +RM16;
+246	F6	MUL	1	4	101	0	100	1	0	1	1	.CO......	Unsigned Multiply	AX = +AL * +RM8;
+247	F7	MUL	1	4	101	0	100	4	0	1	1	.CO......	Unsigned Multiply	EDX:EAX = +EAX * +RM32;
+246	F6	NEG	1	3	101	0	100	1	0	1	1	ACOSPZ...	2's Complement	RM8 = 0 - RM8;
+247	F7	NEG	1	3	101	0	100	4	0	1	1	ACOSPZ...	2's Complement	RM32 = 0 - RM32;
+144	90	NOP	0	100	101	0	101	0	0	1	0	.........	No Operation	;
+246	F6	NOT	1	2	101	0	100	1	0	1	1	.........	Binary NOT	RM8 = RM8 ^ 0XFF;
+247	F7	NOT	1	2	101	0	100	4	0	1	1	.........	Binary NOT	RM32 = RM32 ^ 0XFFFFFFFF;
+8	8	OR	1	100	100	1	100	1	0	1	1	.COSPZ...	Binary OR	RM8 = RM8 | R8;
+9	9	OR	1	100	100	4	100	4	0	1	1	.COSPZ...	Binary OR	RM32 = RM32 | R32;
+10	0A	OR	1	100	100	1	100	1	0	1	0	.COSPZ...	Binary OR	R8 = R8 | RM8;
+11	0B	OR	1	100	100	4	100	4	0	1	0	.COSPZ...	Binary OR	R32 = R32 | RM32;
+12	0C	OR	0	100	0	1	103	1	1	1	0	.COSPZ...	Binary OR	AL = AL | I;
+13	0D	OR	0	100	0	4	103	4	4	1	0	.COSPZ...	Binary OR	EAX = EAX | I;
+128	80	OR	1	1	103	1	100	1	1	1	1	.COSPZ...	Binary OR	RM8 = RM8 | I;
+129	81	OR	1	1	103	4	100	4	4	1	1	.COSPZ...	Binary OR	RM32 = RM32 | I;
+131	83	OR	1	1	103	1	100	4	1	1	1	.COSPZ...	Binary OR	RM32 = RM32 | I;
+88	58	POP	0	100	0	4	101	0	0	1	0	.........	Pop Word Off Stack	EAX = [ESP]; ESP += 4;
+89	59	POP	0	100	1	4	101	0	0	1	0	.........	Pop Word Off Stack	ECX = [ESP]; ESP += 4;
+90	5A	POP	0	100	2	4	101	0	0	1	0	.........	Pop Word Off Stack	EDX = [ESP]; ESP += 4;
+91	5B	POP	0	100	3	4	101	0	0	1	0	.........	Pop Word Off Stack	EBX = [ESP]; ESP += 4;
+92	5C	POP	0	100	4	4	101	0	0	1	0	.........	Pop Word Off Stack	ESP = [ESP]; ESP += 4;
+93	5D	POP	0	100	5	4	101	0	0	1	0	.........	Pop Word Off Stack	EBP = [ESP]; ESP += 4;
+94	5E	POP	0	100	6	4	101	0	0	1	0	.........	Pop Word Off Stack	ESI = [ESP]; ESP += 4;
+95	5F	POP	0	100	7	4	101	0	0	1	0	.........	Pop Word Off Stack	EDI = [ESP]; ESP += 4;
+97	61	POPAD	0	100	101	0	101	0	0	1	0	.........	Pop All Registers	EDI = [ESP]; ESP += 4; ESI = [ESP]; ESP += 4; EBP = [ESP]; ESP += 8; EBX = [ESP]; ESP += 4; EDX = [ESP]; ESP += 4; ECX = [ESP]; ESP += 4; EAX = [ESP]; ESP += 4;
+157	9D	POPFD	0	100	101	0	101	0	0	1	0	.........	Pop Flags Off Stack	EFLAGS = [ESP]; ESP += 4;
+80	50	PUSH	0	100	0	4	101	0	0	1	0	.........	Push Word Onto Stack	[ESP] = EAX; ESP -= 4;
+81	51	PUSH	0	100	1	4	101	0	0	1	0	.........	Push Word Onto Stack	[ESP] = ECX; ESP -= 4;
+82	52	PUSH	0	100	2	4	101	0	0	1	0	.........	Push Word Onto Stack	[ESP] = EDX; ESP -= 4;
+83	53	PUSH	0	100	3	4	101	0	0	1	0	.........	Push Word Onto Stack	[ESP] = EBX; ESP -= 4;
+84	54	PUSH	0	100	4	4	101	0	0	1	0	.........	Push Word Onto Stack	[ESP] = ESP; ESP -= 4;
+85	55	PUSH	0	100	5	4	101	0	0	1	0	.........	Push Word Onto Stack	[ESP] = EBP; ESP -= 4;
+86	56	PUSH	0	100	6	4	101	0	0	1	0	.........	Push Word Onto Stack	[ESP] = ESI; ESP -= 4;
+87	57	PUSH	0	100	7	4	101	0	0	1	0	.........	Push Word Onto Stack	[ESP] = EDI; ESP -= 4;
+104	68	PUSH	0	100	103	4	101	0	4	1	0	.........	Push Word Onto Stack	[ESP] = I; ESP -= 4;
+106	6A	PUSH	0	100	103	1	101	0	1	1	0	.........	Push Word Onto Stack	[ESP] = I; ESP -= 1;
+255	FF	PUSH	1	6	101	0	100	4	0	1	1	.........	Push Word Onto Stack	[ESP] = RM32; ESP -=4;
+96	60	PUSHAD	0	100	101	0	101	0	0	1	0	.........	Push All Registers	[ESP] = EAX; ESP -= 4; [ESP] = ECX; ESP -= 4; [ESP] = EDX; ESP -= 4; [ESP] = EBX; ESP -= 4; [ESP] = ESP; ESP -= 4; [ESP] = EBP; ESP -= 4; [ESP] = ESI; ESP -= 4; [ESP] = EDI; ESP -=4;
+156	9C	PUSHFD	0	100	101	0	101	0	0	1	0	.........	Push Flags Onto Stack	[ESP] = EFLAGS;
+192	C0	RCL	1	2	103	1	100	1	1	1	1	.CO......	Rotate Through Carry Left	temp = RM8[8 - I]; RM8 = (RM8 << I) + (CF << I - 1) + (RM8 >> 9 - I);  CF = temp;
+193	C1	RCL	1	2	103	1	100	4	1	1	1	.CO......	Rotate Through Carry Left	temp = RM32[32 - I]; RM32 = (RM32 << I) + (CF << I - 1) + (RM32 >> 33 - I);  CF = temp;
+208	D0	RCL	1	2	101	0	100	1	0	1	1	.CO......	Rotate Through Carry Left	temp = RM8[7]; RM8 = RM8 << 1 + CF;  CF = temp;
+209	D1	RCL	1	2	101	0	100	4	0	1	1	.CO......	Rotate Through Carry Left	temp = RM32[31]; RM32 = RM32 << 1 + CF;  CF = temp;
+210	D2	RCL	1	2	1	1	100	1	0	1	1	.CO......	Rotate Through Carry Left	temp = RM8[8 - CL]; RM8 = (RM8 << CL) + (CF << CL - 1) + (RM8 >> 9 - CL);  CF = temp;
+211	D3	RCL	1	2	1	1	100	4	0	1	1	.CO......	Rotate Through Carry Left	temp = RM32[32 - CL]; RM32 = (RM32 << CL) + (CF << CL - 1) + (RM32 >> 33 - CL);  CF = temp;
+192	C0	RCR	1	3	103	1	100	1	1	1	1	.CO......	Rotate Through Carry Right	temp = RM8[8 - I]; RM8 = (RM8 << I) + (CF << I - 1) + (RM8 >> 9 - I);  CF = temp;
+193	C1	RCR	1	3	103	1	100	4	1	1	1	.CO......	Rotate Through Carry Right	temp = RM32[32 - I]; RM32 = (RM32 << I) + (CF << I - 1) + (RM32 >> 33 - I);  CF = temp;
+208	D0	RCR	1	3	101	0	100	1	0	1	1	.CO......	Rotate Through Carry Right	temp = RM8[0]; RM8 = RM8 >> 1 + (CF << 7);  CF = temp;
+209	D1	RCR	1	3	101	0	100	4	0	1	1	.CO......	Rotate Through Carry Right	temp = RM32[31]; RM32 = RM32 << 1 + CF;  CF = temp;
+210	D2	RCR	1	3	1	1	100	1	0	1	1	.CO......	Rotate Through Carry Right	temp = RM8[8 - CL]; RM8 = (RM8 << CL) + (CF << CL - 1) + (RM8 >> 9 - CL);  CF = temp;
+211	D3	RCR	1	3	1	1	100	4	0	1	1	.CO......	Rotate Through Carry Right	temp = RM32[32 - CL]; RM32 = (RM32 << CL) + (CF << CL - 1) + (RM32 >> 33 - CL);  CF = temp;
+3889	0F31	RDTSC	0	100	101	0	101	0	0	1	0	.........	Read Time-Step Counter	
+194	C2	RET	0	100	103	2	101	0	2	1	0	.........	Return From Procedure	EIP = [ESP]; ESP += 4 * (1 + I);
+195	C3	RET	0	100	101	0	101	0	0	1	0	.........	Return From Procedure	EIP = [ESP]; ESP += 4;
+202	CA	RET	0	100	103	2	101	0	2	1	0	.........	Return From Procedure	EIP = [ESP]; ESP += 4 * (1 + I);
+203	CB	RET	0	100	101	0	101	0	0	1	0	.........	Return From Procedure	EIP = [ESP]; ESP += 4;
+192	C0	ROL	1	0	103	1	100	1	1	1	1	.CO......	Rotate Left	
+193	C1	ROL	1	0	103	1	100	4	1	1	1	.CO......	Rotate Left	
+208	D0	ROL	1	0	101	0	100	1	0	1	1	.CO......	Rotate Left	
+209	D1	ROL	1	0	101	0	100	4	0	1	1	.CO......	Rotate Left	
+210	D2	ROL	1	0	1	1	100	1	0	1	1	.CO......	Rotate Left	
+211	D3	ROL	1	0	1	1	100	4	0	1	1	.CO......	Rotate Left	
+192	C0	ROR	1	1	103	1	100	1	1	1	1	.CO......	Rotate Right	
+193	C1	ROR	1	1	103	1	100	4	1	1	1	.CO......	Rotate Right	
+208	D0	ROR	1	1	101	0	100	1	0	1	1	.CO......	Rotate Right	
+209	D1	ROR	1	1	101	0	100	4	0	1	1	.CO......	Rotate Right	
+210	D2	ROR	1	1	1	1	100	1	0	1	1	.CO......	Rotate Right	
+211	D3	ROR	1	1	1	1	100	4	0	1	1	.CO......	Rotate Right	
+158	9E	SAHF	0	100	101	0	101	0	0	1	0	.........	Store AH Register into FLAGS	EFLAGS = AH;
+192	C0	SAR	1	7	103	1	100	1	1	1	1	.COSPZ...	Shift Arithmetic Right	
+193	C1	SAR	1	7	103	1	100	4	1	1	1	.COSPZ...	Shift Arithmetic Right	
+208	D0	SAR	1	7	101	0	100	1	0	1	1	.COSPZ...	Shift Arithmetic Right	temp = RM8[7]; RM8 = RM8 >> 1; RM[7] = temp;
+209	D1	SAR	1	7	101	0	100	4	0	1	1	.COSPZ...	Shift Arithmetic Right	
+210	D2	SAR	1	7	1	1	100	1	0	1	1	.COSPZ...	Shift Arithmetic Right	
+211	D3	SAR	1	7	1	1	100	4	0	1	1	.COSPZ...	Shift Arithmetic Right	
+24	18	SBB	1	100	100	1	100	1	0	1	1	ACOSPZ...	Subtract with Borrow/Carry	RM8 = RM8 - R8 - CF;
+25	19	SBB	1	100	100	4	100	4	0	1	1	ACOSPZ...	Subtract with Borrow/Carry	RM32 = RM32 - R32 - CF;
+26	1A	SBB	1	100	100	1	100	1	0	1	0	ACOSPZ...	Subtract with Borrow/Carry	R8 = R8 - RM8 - CF;
+27	1B	SBB	1	100	100	4	100	4	0	1	0	ACOSPZ...	Subtract with Borrow/Carry	R32 = R32 - RM32 - CF;
+28	1C	SBB	0	100	0	1	103	1	1	1	0	ACOSPZ...	Subtract with Borrow/Carry	AL = AL - I - CF;
+29	1D	SBB	0	100	0	4	103	4	4	1	0	ACOSPZ...	Subtract with Borrow/Carry	EAX = EAX - I - CF;
+128	80	SBB	1	3	103	1	100	1	1	1	1	ACOSPZ...	Subtract with Borrow/Carry	RM8 = RM8 - I - CF;
+129	81	SBB	1	3	103	4	100	4	4	1	1	ACOSPZ...	Subtract with Borrow/Carry	RM32 = RM32 - I - CF;
+131	83	SBB	1	3	103	1	100	4	1	1	1	ACOSPZ...	Subtract with Borrow/Carry	RM32 = RM32 - I - CF;
+3991	0F97	SETA	1	100	101	0	100	1	0	1	1	.........	Set if Above	
+3987	0F93	SETAE	1	100	101	0	100	1	0	1	1	.........	Set if Above or Equal	
+3986	0F92	SETB	1	100	101	0	100	1	0	1	1	.........	Set if Below	
+3990	0F96	SETBE	1	100	101	0	100	1	0	1	1	.........	Set if Below or Equal	
+3986	0F92	SETC	1	100	101	0	100	1	0	1	1	.........	Set if Carry	
+3988	0F94	SETE	1	100	101	0	100	1	0	1	1	.........	Set if Equal	
+3999	0F9F	SETG	1	100	101	0	100	1	0	1	1	.........	Set if Greater	
+3997	0F9D	SETGE	1	100	101	0	100	1	0	1	1	.........	Set if Greater or Equal	
+3996	0F9C	SETL	1	100	101	0	100	1	0	1	1	.........	Set if Less	
+3998	0F9E	SETLE	1	100	101	0	100	1	0	1	1	.........	Set if Less or Equal	
+3989	0F95	SETNE	1	100	101	0	100	1	0	1	1	.........	Set if Not Equal	
+3985	0F91	SETNO	1	100	101	0	100	1	0	1	1	.........	Set if Not Overflow	
+3984	0F90	SETO	1	100	101	0	100	1	0	1	1	.........	Set if Overflow	
+3994	0F9A	SETP	1	100	101	0	100	1	0	1	1	.........	Set if Parity	
+3995	0F9B	SETPO	1	100	101	0	100	1	0	1	1	.........	Set if Parity Odd	
+192	C0	SHL	1	4	103	1	100	1	1	1	1	.COSPZ...	Shift Logical Left	RM8 = RM8 << I;
+193	C1	SHL	1	4	103	1	100	4	1	1	1	.COSPZ...	Shift Logical Left	RM32 = RM32 << I;
+208	D0	SHL	1	4	101	0	100	1	0	1	1	.COSPZ...	Shift Logical Left	RM32 = RM32 << 1;
+209	D1	SHL	1	4	101	0	100	4	0	1	1	.COSPZ...	Shift Logical Left	RM8 = RM8 << 1;
+210	D2	SHL	1	4	1	1	100	1	0	1	1	.COSPZ...	Shift Logical Left	RM8 = RM8 << CL;
+211	D3	SHL	1	4	1	1	100	4	0	1	1	.COSPZ...	Shift Logical Left	RM32 = RM32 << CL;
+192	C0	SHR	1	5	103	1	100	1	1	1	1	.COSPZ...	Shift Logical Right	RM8 = RM8 >> I;
+193	C1	SHR	1	5	103	1	100	4	1	1	1	.COSPZ...	Shift Logical Right	RM32 = RM32 >> I;
+208	D0	SHR	1	5	101	0	100	1	0	1	1	.COSPZ...	Shift Logical Right	RM8 = RM8 >> 1;
+209	D1	SHR	1	5	101	0	100	4	0	1	1	.COSPZ...	Shift Logical Right	RM32 = RM32 >> 1;
+210	D2	SHR	1	5	1	1	100	1	0	1	1	.COSPZ...	Shift Logical Right	RM8 = RM8 >> CL;
+211	D3	SHR	1	5	1	1	100	4	0	1	1	.COSPZ...	Shift Logical Right	RM32 = RM32 >> CL;
+249	F9	STC	0	100	101	0	101	0	0	1	0	.C.......	Set Carry	CF = 1;
+253	FD	STD	0	100	101	0	101	0	0	1	0	........D	Set Direction Flag	DF = 1;
+251	FB	STI	0	100	101	0	101	0	0	1	0	.......I.	Set Interrupt Flag	IF = 1;
+40	28	SUB	1	100	100	1	100	1	0	1	1	ACOSPZ...	Subtract	RM8 = RM8 - R8;
+41	29	SUB	1	100	100	4	100	4	0	1	1	ACOSPZ...	Subtract	RM32 = RM32 - R32;
+42	2A	SUB	1	100	100	1	100	1	0	1	0	ACOSPZ...	Subtract	R8 = R8 - RM8;
+43	2B	SUB	1	100	100	4	100	4	0	1	0	ACOSPZ...	Subtract	R32 = R32 - RM32;
+44	2C	SUB	0	100	0	1	103	1	1	1	0	ACOSPZ...	Subtract	AL = AL - I;
+45	2D	SUB	0	100	0	4	103	4	4	1	0	ACOSPZ...	Subtract	EAX = EAX - I;
+128	80	SUB	1	5	103	1	100	1	1	1	1	ACOSPZ...	Subtract	RM8 = RM8 - I;
+129	81	SUB	1	5	103	4	100	4	4	1	1	ACOSPZ...	Subtract	RM32 = RM32 - I;
+131	83	SUB	1	5	103	1	100	4	1	1	1	ACOSPZ...	Subtract	RM32 = RM32 - I;
+132	84	TEST	1	100	100	1	100	1	0	1	1	.COSPZ...	Test For Bit Pattern	temp = RM8 - R8;
+133	85	TEST	1	100	100	4	100	4	0	1	1	.COSPZ...	Test For Bit Pattern	temp = RM32 - R32;
+168	A8	TEST	0	0	0	1	103	1	1	1	0	.COSPZ...	Test For Bit Pattern	temp = AL - I;
+169	A9	TEST	0	0	0	0	103	4	4	1	0	.COSPZ...	Test For Bit Pattern	temp = EAX - I;
+246	F6	TEST	1	0	103	1	100	1	1	1	1	.COSPZ...	Test For Bit Pattern	temp = RM32 - I;
+247	F7	TEST	1	0	103	4	100	4	4	1	1	.COSPZ...	Test For Bit Pattern	temp = RM8 - I;
+145	91	XCHG	0	0	0	4	1	4	0	1	0	.........	Exchange	temp = EAX; EAX = ECX; ECX = temp;
+146	92	XCHG	0	0	0	4	2	4	0	1	0	.........	Exchange	temp = EAX; EAX = EDX; EDX = temp;
+147	93	XCHG	0	0	0	4	3	4	0	1	0	.........	Exchange	temp = EAX; EAX = EBX; EBX = temp;
+148	94	XCHG	0	0	0	4	4	4	0	1	0	.........	Exchange	temp = EAX; EAX = ESP; ESP = temp;
+149	95	XCHG	0	0	0	4	5	4	0	1	0	.........	Exchange	temp = EAX; EAX = EBP; EBP = temp;
+150	96	XCHG	0	0	0	4	6	4	0	1	0	.........	Exchange	temp = EAX; EAX = ESI; ESI = temp;
+151	97	XCHG	0	0	0	4	7	4	0	1	0	.........	Exchange	temp = EAX; EAX = EDI; EDI = temp;
+52	34	XOR	0	0	0	1	103	1	1	1	0	.COSPZ...	Exclusive OR	
+53	35	XOR	0	0	0	4	103	4	4	1	0	.COSPZ...	Exclusive OR
+128	80	XOR	1	6	103	1	100	1	1	1	1	.COSPZ...	Exclusive OR
+129	81	XOR	1	6	103	4	100	4	4	1	1	.COSPZ...	Exclusive OR
+131	83	XOR	1	6	103	1	100	4	1	1	1	.COSPZ...	Exclusive OR
+48	30	XOR	1	100	100	1	100	1	0	1	1	.COSPZ...	Exclusive OR
+49	31	XOR	1	100	100	4	100	4	0	1	1	.COSPZ...	Exclusive OR
+50	32	XOR	1	100	100	1	100	1	0	1	0	.COSPZ...	Exclusive OR
+51	33	XOR	1	100	100	4	100	4	0	1	0	.COSPZ...	Exclusive OR

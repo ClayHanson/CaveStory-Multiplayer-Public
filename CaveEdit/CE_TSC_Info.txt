@@ -1,0 +1,91 @@
+<BOA	1	Boss Animate	Animates boss X
+<BSL	1	Start Boss Fight	Starts boss fight with entity X (*Entity must have non-zero HP and flag 200 set)
+<FOB	1	Focus On Boss	Focus on boss in X ticks (*Y must be >0)
+<FOM	1	Focus On Player	Focus on me in X ticks (*Y must be >0)
+<FON	2	Focus Entity	Focus on entity tagged with event X in Y ticks (*X must be >0)
+<FLA	0	Flash	Flashes the screen
+<QUA	1	Quake	Shakes the screen for X ticks
+<UNI	1	Gravity	Sets character movement style (*0000 = Normal, 0001 = Stream-boss style, 0002 = Locked position but can still fire)
+<HMC	0	Hide Player	Hides your character
+<SMC	0	Show Player	Unhides your character
+<MM0	0	Stops Character	Halts characters forward motion
+<MOV	2	Move	Moves you to coordinates X:Y on the current map
+<MYB	1	Bump	Bumps you FROM direction X
+<MYD	1	Face	Makes you face direction X
+<TRA	4	Travel	Travel to map W, run event X, move character to coordinates Y:Z
+<END	0	Unlock Player	Ends the current scripted event
+<FRE	0	Unlock Game	Frees game action, but keeps character locked
+<FAI	1	Fade In	Fade in with direction X
+<FAO	1	Fade Out	Fade out with direction X
+<WAI	1	Pause Script	Wait X ticks
+<WAS	0	Pause Script	Waits until character is standing
+<KEY	0	Lock Player	Locks out player controls (*Use where you need to have animations)
+<PRI	0	Lock Game	Locks out player controls and freezes game action (*Use in areas with enemies)
+<NOD	0	Prompt	Waits for player input before resuming the script
+<SAT	0	Speed-Up	Speeds up text display
+<TUR	0	Speed-Up	Instant text display
+<CLO	0	Close Text Box	Closes the text box
+<CLR	0	Clear Text Box	Clears the text box
+<FAC	1	Facepic Display	Shows face X in the text box (*0000 to clear)
+<GIT	1	Item Display	Displays an item or weapon icon above the text box (*0000 to clear)
+<MS2	0	Invisible Text Box	Opens an invisible text box at the top of screen
+<MS3	0	Top Text Box	Opens a text box at the top of screen
+<MSG	0	Normal Text Box	Opens a text box
+<NUM	1	Output	Outputs value Y value from <AM+ as text (* Use 0000, other values give random(?) numbers)
+<ANP	3	Animation	Animates entity X with method Y and direction Z
+<CNP	3	Change	Changes entity X to type Y with direction Z
+<INP	3	Change and Set Flag	Changes entity tagged with event X to type Y with direction Z and sets entity flag 100
+<MNP	4	Move Entity	Move entity tagged with event W to coordinates X:Y with direction Z
+<DNA	1	Remove by Type	Removes all entities of type X (*Useful for clearing boss mooks and spawns)
+<DNP	1	Remove by ID	Removes all entities tagged with event X
+<SNP	4	Spawn Entity	Creates and entity of type W at coordinates X:Y with direction Z
+<FL-	1	Flag Clear	Clears flag X
+<FL+	1	Flag Set	Sets flag X
+<MP+	1	Mapflag Set	Set mapflag for stage X (*Use with care - there is no way to unset these flags)
+<SK-	1	Skipflag Clear	Clear skipflag X
+<SK+	1	Skipflag Set	Set skipflag X
+<EQ+	1	Equip On	Equip item X
+<EQ-	1	Equip Off	Unequip item X
+<ML+	1	Health	Gain X to maximum health
+<IT+	1	Item Gain	Get item X
+<IT-	1	Item Loss	Lose item X
+<AM+	2	Weapon Gain	Gives weapon X, adds Y ammo (*Y=0000 for unlimited)
+<AM-	1	Weapon Loss	Takes weapon X
+<TAM	3	Weapon Trade	Trade weapon X for weapon Y and sets ammo to Z (*Y=0000 for no change)
+<UNJ	1	Damage Check	Jump to event X if no damage has been taken
+<NCJ	2	Entity Check by Type	Jump to event Y if any entity of type X is present
+<ECJ	2	Entity Check by ID	Jumps to event Y if any entity tagged with event X is found
+<FLJ	2	Flag Jump	Jump to event X if flag Y is set
+<ITJ	2	Item Jump	Jump to event Y if you have item X
+<MPJ	1	Mapflag Jump	Jump to event X if map flag for current stage is set
+<YNJ	1	Prompt Jump	Prompts Yes/No, jumps to event X if No
+<SKJ	2	Skipflag Jump	Jump to event Y is skipflag X is set
+<EVE	1	Goto Event	Goto event X
+<AMJ	2	Weapon Jump	Jumps to event Y if you have weapon X
+<MLP	0	Map	Displays a map of the current area
+<MNA	0	Stage Name	Displays the name of the current area
+<CMP	3	Tile Change	Changes the tile at coordinates X:Y to type Z
+<SMP	2	Tile Shift	Subtract 1 from the tile type at coordinates X:Y (*Toggles a tile without smoke FX)
+<CRE	0	Credits	Rolls credits
+<XX1	1	Island	Shows distant view of the island
+<CIL	0	Clear Illustration	Clears illustration
+<SIL	1	Show Illustration	Show  illustration X
+<ESC	0	Quit to Title Screen	Quits to title screen
+<INI	0	Reset	Resets the game
+<LDP	0	Load Profile.dat	Loads a saved game from Profile.dat
+<PS+	2	Teleporter Menu Set	Set teleporter slot X to location Y
+<SLP	0	Teleporter Menu Display	Shows the teleporter menu
+<ZAM	0	Zero Weapons	Zeros all weapon energy
+<AE+	0	Ammo Refill	Refils ammo
+<LI+	1	Health Refill	Recovers X health
+<SVP	0	Game Save	Saves current game to Profile.dat
+<STC	0	Timer Save	Saves current time to 290.rec
+<SOU	1	Play Sound Effect	Plays sound effect X
+<CMU	1	Change Music	Changes music to song X
+<FMU	0	Fade Music	Fades the music
+<RMU	0	Resume Music	Resumes the song played before the current
+<CPS	0	Propeller Stop	Stops the propeller sound
+<SPS	0	Propeller Start	Starts the propeller sound
+<CSS	0	Stream Stop	Stops the stream sound
+<SSS	1	Stream Start	Starts the stream sound at volume X
+

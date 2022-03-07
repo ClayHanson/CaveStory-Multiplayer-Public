@@ -1,0 +1,315 @@
+0					<nothing>
+1	Weapn	enrgy			Weapon energy (small)
+2	Enemy	Behem			Enemy - Behemoth
+4	Smoke				Smoke
+5	Enemy	CrtHG			Enemy - Critter (hopping, green)
+6	Enemy	BtlHG			Enemy - Beetle (horiz, green)
+7	Enemy	Basil			Enemy - Basil
+8	Enemy	BtlF1			Enemy - Beetle (follow 1)
+9	Blrg	drop			Balrog (drops in)
+10	Boss	Blrg0			Boss - Balrog (shooting)
+11	Proj	Blrg1			Projectile - Balrog (energy shot)
+12	Blrg				Balrog (cutscene)
+13	Force	field			Forcefield
+14	Santa	Key			Santa's Key
+15	Chest	closd			Treasure chest (closed)
+16	Save	point			Save point
+17	Refil				Health/ammo refill
+18	Door				Door
+19	Blrg	bust			Balrog (busts in)
+20	Compu				Computer
+21	Chest	open		One tile down	Treasure chest (open)
+22	Telep				Teleporter
+23	Telep	light			Teleporter lights
+24	Enemy	PCrit			Enemy - Power Critter
+25	Lift	platf			Lift platform
+26	Enemy	BatBC			Enemy - Bat (black, circling)
+27	Spike	large			Spikes (large)
+28	Enemy	CrtFy			Enemy - Critter (flying)
+29	Cthu				Cthulhu
+30	Hermt	Gunsm			Hermit Gunsmith
+31	Enemy	BatBH			Enemy - Bat (black, hanging)
+32	Capsl	life			Life Capsule
+33	Proj	Blrg2			Projectile - Balrog (energy bounce)
+34	Bed				Bed
+35	Enemy	Manan			Enemy - Mannan
+36	Boss	Blrg2			Boss - Balrog (hovering)
+37	Sign	post			Signpost
+38	Fire	place			Fireplace fire
+39	Save	sign		Cocktail sign	Save sign
+40	Santa				Santa
+41	Door	bustd			Busted doorway
+42	Sue				Sue
+43	Black	board			Blackboard
+44	Enemy	Polsh			Enemy - Polish
+45	Enemy	Baby			Enemy - Baby
+46	H/V	trigr	Follow player	Vertical	Horiz/vert trigger
+47	Enemy	ScrcG			Enemy - Sandcroc (green)
+48	Proj	Omega			Projectile - Omega
+49	Enemy	SkulH			Enemy - Skullhead
+50	Proj	SkulH			Projectile - Skeleton
+51	Enemy	CrowS			Enemy - Crow & Skullhead
+52	BRobt	sit			Blue robot (sitting)
+54	Enemy	SkulS			Enemy - Skullstep
+55	Kazum				Kazuma
+56	Enemy	BtlHB			Enemy - Beetle (horiz, brown)
+57	Enemy	Crow			Enemy - Crow
+58	Enemy	Basu1			Enemy - Basu (1)
+59	Enemy	Door			Enemy - Door
+60	Torok				Toroko
+61	King				King
+62	Kazum	compu			Kazuma (computer)
+63	Torok	attck			Toroko (attacking)
+64	Enemy	CrtHB			Enemy - Critter (hopping, blue)
+65	Enemy	BatBu			Enemy - Bat (blue)
+67	Msry	float			Misery (floating)
+68	Boss	Blrg1			Boss - Balrog (running)
+69	Enemy	Pign			Enemy - Pignon
+70	Spark	item			Sparkling item
+71	Enemy	Chinf			Enemy - Chinfish
+72	Sprnk				Sprinkler
+73	Water	drop			Water drop
+74	Jack				Jack
+75	Kanpa	fishn			Kanpachi (fishing)
+76	Flowr				Flowers
+77	Sanda	pavil			Sandaime's pavilion
+78	Pot				Pot
+79	Mahin				Mahin
+80	Enemy	GravK			Enemy - Gravekeeper
+81	Enemy	GPign			Enemy - Giant Pignon
+82	Msry	stand			Misery (standing)
+83	Igor				Igor (cutscene)
+84	Proj	Basu1			Projectile - Basu (1)
+85	Termn				Terminal
+86	Missl				Missile
+87	Heart			No flash	Heart
+88	Boss	Igor			Boss - Igor
+89	Dead	Igor			Igor (defeated)
+91	Cage				Cage
+92	Sue	compu			Sue (computer)
+93	Chaco				Chaco
+94	Enemy	Kulal			Enemy - Kulala
+95	Enemy	Jelly			Enemy - Jelly
+96	Fan	left			Fan (left)
+97	Fan	up			Fan (up)
+98	Fan	right			Fan (right)
+99	Fan	down			Fan (down)
+100	Grate				Grate
+101	PowCn	scrn			Power controls (screen)
+102	PowCn	pflow			Power controls (power flow)
+103	Proj	Manan			Projectile - Mannan
+104	Enemy	Frog			Enemy - Frog
+105	Bloon	HeyL			Balloon ('Hey!' low)
+106	Bloon	HeyH			Balloon ('Hey!' high)
+107	Malco				Malco (undamaged)
+108	Proj	Bfrog			Projectile - Balfrog
+109	Malco	damgd			Malco (damaged)
+110	Enemy	Puchi			Enemy - Puchi
+111	Quote	t-out			Quote (teleports out)
+112	Quote	t-in			Quote (teleports in)
+113	Boost				Prof. Booster
+114	Enemy	Press			Enemy - Press
+115	Enemy	Ravil			Enemy - Ravil
+116	RFlow	petal			Red Flowers (petals)
+117	Curly				Curly
+118	Boss	Curly			Boss - Curly
+119	Table	chair			Table & chair
+123	Proj	Curly			Projectile - Curly
+124	Sun	stone			Sunstone
+125	Hiddn	H/M			Hidden heart/missile
+126	Puppy	run			Puppy (runs away)
+130	Puppy	wag			Puppy (tail wag)
+131	Puppy	sleep			Puppy (sleeping)
+132	Puppy	bark			Puppy (bark)
+133	Jenka				Jenka
+134	Enemy	Armdl			Enemy - Armadillo
+135	Enemy	Skelt			Enemy - Skeleton
+136	Carry	Puppy			Puppy (carried)
+137	LDoor	frame			Large doorway (frame)
+138	LDoor	doors			Large doorway (doors)
+139	Doctr				Doctor (crowned)
+140	Boss	Torok			Boss - Frenzied Toroko
+142	Enemy	Flwcb			Enemy - Flowercub
+143	Jenka	uncon			Jenka (collapsed)
+144	Torok	telep			Toroko (teleports in)
+146	Ligtn				Lightning
+147	Enemy	CrtHv			Enemy - Critter (hover)
+148	Proj	CrtHv			Projectile - Critter
+149	Block	MoveH			Moving block (horiz)
+150	Quote				Quote
+151	BRobt	stand			Blue robot
+152	Shutr	stuck			Shutter (stuck)
+153	Enemy	Gaudi			Enemy - Gaudi
+154	Dead	Gaudi			Enemy - Gaudi (defeated)
+155	Enemy	GaudF			Enemy - Gaudi (flying)
+156	Proj	GaudF			Projectile - Gaudi (flying)
+157	Block	MoveV			Moving block (vert)
+158	Proj	MonX			Projectile - Monster X
+159	Dead	MonX			Boss - Monster X (defeated)
+160	Boss	PoohB			Boss - Pooh Black
+161	Proj	PoohB			Projectile - Pooh Black
+162	Dead	PoohB			Pooh Black (defeated)
+163	Dr	Gero			Dr. Gero
+164	Nurse	Hasum			Nurse Hasumi
+165	Curly	uncon			Curly (collapsed)
+166	Chaba				Chaba
+167	Boost	fall			Prof. Booster (fall)
+168	Bould				Boulder
+169	Boss	Blrg3			Boss - Balrog (missiles)
+170	Proj	Blrg3			Projectile - Balrog (missiles)
+171	Enemy	FWhir			Enemy - Fire Whirrr
+172	Proj	FWhir			Projectile - Fire Whirrr
+173	Enemy	GaudA			Enemy - Gaudi Armor
+174	Proj	GaudA			Projectile - Gaudi Armor
+175	Enemy	GaudE			Enemy - Gaudi Egg
+176	Enemy	BuyoB			Enemy - Buyobuyo Base
+177	Enemy	Buyo			Enemy - Buyobuyo
+178	Proj	Core1			Projectile - Core (spinner)
+179	Proj	Core2			Projectile - Core (wisp)
+180	Curly	A.I.			Curly (A.I.)
+184	Shutr	large			Shutter (large)
+185	Shutr	small			Shutter (small)
+186	Lift	block			Lift block
+187	Enemy	FuzzC			Enemy - Fuzz Core
+190	Surfc	robot			Surface robot
+191	Water	level			Water level
+192	Scoot				Scooter
+193	Scoot	dead			Scooter (pieces)
+194	BRobt	dead			Blue robot (pieces)
+195	Grate	mouth			Grate mouth
+196	Mtion	wall			Motion wall
+198	Proj	IronH			Projectile - Ironhead
+199	Water	curnt			Underwater current
+200	Enemy	DragZ			Enemy - Dragon Zombie
+201	Dead	DragZ			Dragon Zombie (dead)
+202	Proj	DragZ			Projectile - Dragon Zombie
+203	Enemy	CrtHA			Enemy - Critter (hopping, aqua)
+204	Spike	FallS			Falling Spike (small)
+205	Spike	FallL			Falling Spike (large)
+206	Enemy	CBomb			Enemy - Counter Bomb
+207	Bloon	CDown			Balloon (countdown)
+208	Enemy	Basu2			Enemy - Basu (2)
+209	Proj	Basu2			Projectile - Basu (2)
+210	Enemy	BtlF2			Enemy - Beetle (follow 2)
+211	Spike	small			Spikes (small)
+212	Sky	Dragn			Sky Dragon
+213	Enemy	NiteS			Enemy - Night Spirit
+214	Proj	NiteS			Projectile - Night Spirit
+215	Enemy	ScrcW			Enemy - Sandcroc (white)
+216	Debug	cat			Debug cat
+217	Itoh				Itoh
+219	Genrt	Smoke			Generator - Smoke/Underwater current
+220	SBrig	stand			Shovel Brigade
+221	SBrig	walk			Shovel Brigade (walking)
+222	Prisn	bars			Prison bars
+223	Momo				Momorin
+224	Chie				Chie
+225	Megan				Megane
+226	Kanpa	stand			Kanpachi
+227	Buckt				Bucket
+228	Droll	guard			Droll (guard)
+229	RFlow	sprts			Red Flowers (sprouts)
+230	RFlow	bloom			Red Flowers (blooming)
+231	Rockt				Rocket
+232	Enemy	Orang			Enemy - Orangebell
+234	RFlow	pickd			Red Flowers (picked)
+235	Midor				Midorin
+236	Enemy	Gunfs			Enemy - Gunfish
+237	Proj	Gunfs			Projectile - Gunfish
+238	Enemy	PresK			Enemy - Press (killer)
+239	Cage	bars			Cage bars
+240	Mimig	jail			Mimiga (jailed)
+241	Enemy	CritHR			Enemy - Critter (hopping, red)
+242	Enemy	BatRd			Enemy - Bat (red)
+243	Genrt	BatRd			Generator - Bat (red)
+244	Acid	drop			Acid drop
+245	Genrt	Acid			Generator - Acid drop
+246	Enemy	PresP			Enemy - Press (proximity)
+247	Boss	Msry			Boss - Misery
+248	Boss	MsryV			Boss - Misery (vanish)
+249	Proj	Msry1			Projectile - Misery (energy shot)
+250	Proj	Msry2			Projectile - Misery (lightning ball)
+251	Proj	Msry3			Projectile - Misery (lightning)
+253	Capsl	enrgy			Energy Capsule
+254	Heli	copter			Helicopter
+256	Doctr	back			Doctor (crowned, facing away)
+257	Red	Cryst			Red Crystal
+258	Mimig	sleep			Mimiga (sleeping)
+259	Carry	Curl1			Curly (carried, unconscious)
+260	SBrig	cage			Shovel Brigade (caged)
+261	Chie	cage			Chie (caged)
+262	Chaco	cage			Chaco (caged)
+263	Boss	Doct1			Boss - Doctor
+264	Proj	Doct1			Projectile - Doctor (red wave)
+267	Boss	Doct2			Boss - Muscle Doctor
+268	Enemy	Igor			Enemy - Igor
+269	Enemy	BatRE			Enemy - Bat (red energy)
+270	Red	enrgy			Red energy
+271	UBlok				Underwater block
+272	Genrt	UBlok			Generator - Underwater block
+273	Proj	Droll			Projectile - Droll
+274	Enemy	Droll			Enemy - Droll
+275	Puppy	items			Puppy (with items)
+276	Boss	RDemn			Boss - Red Demon
+277	Proj	RDemn			Projectile - Red Demon
+278	Littl	famly			Little family
+279	FBlck	large			Falling block (large)
+280	Sue	telep			Sue (teleported in by Misery)
+281	Doctr	enrgy			Doctor (red energy form)
+283	Enemy	Msry			Enemy - Misery (transformed)
+284	Enemy	Sue			Enemy - Sue (transformed)
+289	Enemy	CrtHO			Enemy - Critter (hopping, orange)
+290	Enemy	BatOr			Enemy - Bat (orange)
+291	UCore	Mini			Mini Undead Core (before fight)
+292	Quake				Quake
+294	Quake	FBlck			Quake & Generator - Falling blocks
+295	Cloud				Cloud
+296	Genrt	Cloud			Generator - Cloud
+298	Intro	Doctr			Doctor (uncrowned)
+299	Intro	Bubbl			Balrog/Misery (bubble)
+300	Intro	Crown			Demon Crown
+301	Enemy	FishO			Enemy - Fish Missile (orange)
+304	Gaudi	sit			Gaudi (sitting)
+305	Puppy	small			Puppy (small)
+306	Blrg	nurse			Balrog (nurse)
+307	Santa	cage			Santa (caged)
+308	Enemy	Stump			Enemy - Stumpy
+309	Enemy	Bute			Enemy - Bute
+310	Enemy	ButeS			Enemy - Bute (sword)
+311	Enemy	ButeA			Enemy - Bute (archer)
+312	Proj	ButeA			Projectile - Bute (archer)
+313	Boss	MPign			Boss - Ma Pignon
+316	Dead	Bute			Enemy - Bute (defeated)
+317	Enemy	Mesa			Enemy - Mesa
+318	Dead	Mesa			Enemy - Mesa (defeated)
+320	Carry	Curl2			Curly (carried, shooting)
+322	Enemy	Delet			Enemy - Deleet
+323	Enemy	ButeG			Enemy - Bute (generator)
+324	Genrt	Bute			Generator - Bute
+325	Proj	HeavP			Projectile - Heavy Press
+326	turn	human			Itoh/Sue (turning human)
+328	human	machn			Transmogrifier
+329	Bldg	fan			Building fan
+330	Enemy	Rolln			Enemy - Rolling
+331	Proj	Blls1			Projectile - Ballos (bone)
+332	Proj	Blls2			Projectile - Ballos (shockwave)
+333	Proj	Blls3			Projectile - Ballos (lightning)
+334	Sweat				Sweat
+335	Ika-	chan			Ika-chan
+337	Numa	hachi			Numahachi
+338	Enemy	GDevl			Enemy - Green Devil
+339	Genrt	GDevl			Generator - Green Devil
+340	Boss	Blls1			Boss - Ballos
+345	Proj	Blls4			Projectile - Ballos (skull)
+347	Enemy	Hoppy			Enemy - Hoppy
+348	Spike	Blls			Ballos spikes (rising)
+349	Statu				Statue
+350	Enemy	ButRA			Enemy - Bute (archer, red)
+351	Statu	shoot			Statue (can shoot)
+352	King	sword			King (sword)
+353	Enemy	ButRS			Enemy - Bute (sword, red)
+356	Blrg	rescu			Balrog (rescue)
+357	Puppy	ghost			Puppy (ghost)
+358	Msry	wind			Misery (wind)
+359	Genrt	WDrop			Generator - Water drop
+360	Thank	you!			'Thank you!'

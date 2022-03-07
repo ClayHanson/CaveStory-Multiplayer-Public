@@ -1,0 +1,179 @@
+Cave Story Sprite Animations (<ANP)
+
+
+	Balrog [0012]
+0000	Stand around. Eyes blink.
+0010	Going up!
+0011	Going up!
+0020	Uh oh! Smoking, going up!
+0021	Smoking, going up!
+0030	Smile
+0040	Super panic
+0041	Super panic
+0042	Uh oh! Image blinks
+0043	Uh oh! Image blinks
+0050	Back turned
+0060	Walk forward no falling
+0070	Uh oh! Vanish
+0071	Vanish
+0080	Panic
+0081	Panic
+0100	Super going up! (changes map tiles)
+
+
+	Hermit Gunsmith [0030]
+0000	Only animation. Direction 0000 is standing.
+	Any other direction is sitting down sleeping,
+	one space below original. Flag 0x1000 starts
+	him out this way. Going to direction 0000
+	stands him up, does not change position.
+	
+
+	Sue [0042]
+0000	Stand around. Eyes blink.
+0003	Walk forward			
+0004	Walk forward			
+0005	Back turned			
+0008	Knocked a bit over		
+0009	Fall over			
+0010	Fall over			
+0011	Throw a fit			
+0012	Fall over, throw a fit.
+0014	CRASH GAME
+0015	Summons red crystal		
+0017	Looks afraid
+0020	Run while to left of main char		
+0021	Run while to left of main char		
+0030	Run forward			
+0031	Run forward			
+0040	Hops once	
+
+
+	King [0061]
+0000	Stand around. Eyes blink.
+0005	Fall over
+0006	Fall over
+0007	Fall over
+0008	Walk forward
+0009	Flop down, walk forward
+0010	Run forward			
+0011	Run forward			
+0020	Brandish sword			
+0030	Knocked way over
+0031	Knocked way over		
+0040	Die, leave sword		
+0042	Die, leave sword		
+0060	Leap to the right.		
+
+
+	Misery (floating) [0067]
+0000	Teleport in, hover
+0001	Teleport in, hover
+0010	Hover
+0011	Hover
+0013	Drop to floor, standing
+0014	Standing *
+0015	Standing, create bubble *
+0016	Create bubble (not animated) *
+0020	Hover, going up!
+0021	Hover, going up! (doesn't pass through walls)
+0025	Standing, cast big spell *
+0025	Standing, cast big spell *
+0027	Standing *
+
+* Use these after 0013, or sprite will continue to move 
+in last "hover" direction (up or down).
+
+
+	Misery (standing) [0082]
+0000	Stand around. Eyes blink.
+0011	Sitting?		
+0015	Cast spell
+0020	Going up!		
+0021	Going up! (doesn't pass through walls)	
+0025	Cast big spell
+0026	Cast big spell
+0030	Cast spell		
+0031	Cast spell
+0040	Cast bubbles		
+0041	Cast bubbles		
+0050	Defeated		
+
+
+	Prof. Booster [0113]
+0000	Stand around. Eyes blink.
+0003	Walk forward
+0004	Walk forward
+0005	Show back
+0030	Warp + teleport in?
+0031	Teleport in
+
+
+	Curly [0117]
+0000	Stand around. Eyes blink.
+0003	Walk forward
+0004	Walk forward
+0005	Poof defeat
+0006	Defeat		
+0010	Walk towards main char until 1 away	
+0011	Walk forward no falling		
+0020	Back turned			
+0021	Look up				
+0030	Knocked a bit over
+0031	Fall over			
+0032	Fall over
+0070	Moonwalk			
+0071	Moonwalk			
+
+
+	General Notes:
+This document is mostly for cutscene sprites and guests.
+Enemy and boss animations, from what brief experimentation
+I did on them, mostly consist of an innert mode, attack mode,
+and specific attack functions. These would be better suited
+to be catalogued in a different document, and I'm unsure how
+useful they would be for more detailed scripted events.
+
+The most likely numbers to find animations on are X0 and X1. 
+The next most likely are X5 and X6. However, there enough 
+exceptions that sometimes you'll just need to brute force
+your way through all of them if you're looking for something 
+specific.
+
+There does not seem to be any standard convention for what
+types of animations go with what number. They vary from entity
+to entity. Many entities lack what seem like common sense 
+animations (example: Curly's 0010 animation). It seems likely
+that unless an animation was needed for a specific entity
+while the game was being created, it was not enabled or 
+implemented. It is possible the animations from one entity
+could be applied to another through exe hacking, but that's
+way beyond the scope of this document.
+
+Many animations have duplicates. In my testing environment,
+there did not seem to be any difference. However, the 
+difference could be subtle or dependant on something my
+environment lacked. For example, if my test room didn't have
+drop-offs in it, I would not have detected that some "walk
+forward" animations had a "no falling" aspect to them. If
+I find differences at a later date, I will make note of them.
+
+
+	Last Thoughts:
+These are mostly the cutscene sprites that I will have need of
+in my own project. I do not know if I will be getting around to
+investigating and listing the animations for the other sprites,
+so feel free to add to this document and add your "credits" to mine. 
+
+
+	Credits:
+This file is built entirely on the work of others, Pixel for 
+creating Cave Story, and too many hard-working people in the 
+community to list. These credits are not for recognition, but 
+primarily for version tracking, to avoid duplication of effort.
+
+04/23/06
+Shmitz - 	Sue, Curly, King, Misery (standing), 
+		Misery (floating), Balrog (cutscene),
+		Hermit Gunsmith
+
